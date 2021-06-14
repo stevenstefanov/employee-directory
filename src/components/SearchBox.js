@@ -3,17 +3,15 @@ import "../styles/SearchBox.css";
 
 function SearchBox({ handleSearchChange }) {
   return (
-    <div className="searchbox">
-      <form className="form-inline">
+      <form className="d-flex">
         <input
-          className="form-control"
+          className="form-control bg-light text-center"
           type="search"
           placeholder="Search"
           aria-label="Search"
           onChange={e => handleSearchChange(e)}
         />
       </form>
-    </div>
   );
 }
 export default SearchBox;
