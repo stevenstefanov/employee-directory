@@ -1,3 +1,4 @@
+// Import dependenices
 import React, { Component } from "react";
 import DataTable from "./DataTable";
 import Nav from "./Nav";
@@ -32,26 +33,26 @@ export default class DataArea extends Component {
 
     const compareFnc = (a, b) => {
       if (this.state.order === "ascend") {
-        // account for missing values
+        // Account for missing values
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
+        // Numerically
         else if (heading === "name") {
           return a[heading].first.localeCompare(b[heading].first);
         } else {
           return a[heading] - b[heading];
         }
       } else {
-        // account for missing values
+        // Account for missing values
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
+        // Numerically
         else if (heading === "name") {
           return b[heading].first.localeCompare(a[heading].first);
         } else {
@@ -68,7 +69,7 @@ export default class DataArea extends Component {
     console.log(event.target.value);
     const filter = event.target.value;
     const filteredList = this.state.users.filter(item => {
-      // merge data together, then see if user input is anywhere inside
+      // Merge data together, then see if user input is anywhere inside
       let values = Object.values(item)
         .join("")
         .toLowerCase();

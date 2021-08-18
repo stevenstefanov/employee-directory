@@ -1,3 +1,4 @@
+// Import dependencies
 import React from 'react';
 
 const Footer = () => {

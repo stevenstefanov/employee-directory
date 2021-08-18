@@ -1,3 +1,4 @@
+// Import dependencies
 import React from "react";
 import DataBody from "./DataBody";
 import "../styles/DataTable.css";
